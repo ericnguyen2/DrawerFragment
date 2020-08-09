@@ -52,12 +52,19 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         if (menuItem.getItemId() == R.id.home) {
-
+            fragmentManager = getSupportFragmentManager();
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container_fragment, new MainFragment());
+            fragmentTransaction.commit();
         }
 
-        if (menuItem.getItemId() == R.id.home) {
-
+        if (menuItem.getItemId() == R.id.another) {
+            fragmentManager = getSupportFragmentManager();
+            fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.replace(R.id.container_fragment, new FragmentSecond());
+            fragmentTransaction.commit();
         }
+
         return true;
     }
 }
