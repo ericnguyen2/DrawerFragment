@@ -22,7 +22,7 @@ public class MainFragment extends Fragment {
         Button clickme = view.findViewById(R.id.load);
         clickme.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 listener.onButtonSelected();
             }
         });
